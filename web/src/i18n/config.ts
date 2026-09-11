@@ -53,10 +53,12 @@ i18n
       escapeValue: false, // not needed for react as it escapes by default
     },
     detection: {
-      order: ['localStorage', 'navigator'],
+      // Default to the English fallback for first-time visitors. Explicit user
+      // selections are still restored from localStorage.
+      order: ['localStorage'],
       caches: ['localStorage'],
-      // Browsers report `zh-CN`/`zh-TW`/`zh`; map them onto our `zhCN`/`zhTW`
-      // codes (non-Chinese codes pass through for normal supportedLngs matching).
+      // Map legacy or previously stored browser-style Chinese language tags
+      // onto the resource codes used by this application.
       convertDetectedLanguage,
     },
   })
