@@ -20,6 +20,7 @@ import { useTranslation } from 'react-i18next'
 
 import { getPrivacyPolicy } from './api'
 import { LegalDocument } from './legal-document'
+import { PrivacyContent } from './privacy-content'
 
 export function PrivacyPolicy() {
   const { t } = useTranslation()
@@ -31,6 +32,7 @@ export function PrivacyPolicy() {
       emptyMessage={t(
         'The administrator has not configured a privacy policy yet.'
       )}
+      fallback={<PrivacyContent />}
     />
   )
 }

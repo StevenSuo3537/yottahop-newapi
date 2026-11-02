@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: new-api-custom:local
+    image: new-api-custom:yottahop-model-ecosystem-20260914
     environment:
       SQL_DSN: postgresql://${POSTGRES_USER:-newapi}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@postgres:5432/${POSTGRES_DB:-newapi}
       REDIS_CONN_STRING: redis://:${REDIS_PASSWORD:?Set REDIS_PASSWORD in .env}@redis:6379/0
@@ -13,7 +13,9 @@ services:
       ERROR_LOG_ENABLED: "true"
       BATCH_UPDATE_ENABLED: "true"
       NODE_NAME: ${NODE_NAME:-new-api-node-1}
-      TRUSTED_PROXIES: ${TRUSTED_PROXIES:-none}
+      SESSION_COOKIE_SECURE: "true"
+      SESSION_COOKIE_TRUSTED_URL: https://www.yottahop.com
+      TRUSTED_PROXIES: ${TRUSTED_PROXIES:-127.0.0.1/32,::1/128,172.16.0.0/12}
     depends_on:
       postgres:
         condition: service_healthy

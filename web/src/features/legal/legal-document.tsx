@@ -34,6 +34,7 @@ type LegalDocumentProps = {
   queryKey: string
   fetchDocument: () => Promise<LegalDocumentResponse>
   emptyMessage: string
+  fallback?: React.ReactNode
 }
 
 export function LegalDocument({
@@ -41,6 +42,7 @@ export function LegalDocument({
   queryKey,
   fetchDocument,
   emptyMessage,
+  fallback,
 }: LegalDocumentProps) {
   const { t } = useTranslation()
   const { data, isLoading } = useQuery({
@@ -69,6 +71,9 @@ export function LegalDocument({
   }
 
   if (!success || !hasContent) {
+    if (fallback) {
+      return <PublicLayout>{fallback}</PublicLayout>
+    }
     return (
       <PublicLayout>
         <div className='mx-auto max-w-2xl py-12'>

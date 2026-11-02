@@ -1,0 +1,111 @@
+<style>
+  .yh-privacy { --ink: #112638; --muted: #596d79; --line: #dce8eb; --teal: #087f91; color: var(--ink); background: #f9fcfc; font-family: 'Public Sans Variable', 'Public Sans', Arial, sans-serif; }
+  .yh-privacy * { box-sizing: border-box; }
+  .yh-privacy a { color: #087f91; text-underline-offset: 4px; }
+  .yh-privacy a:focus-visible, .yh-privacy summary:focus-visible { outline: 3px solid #0a9eb5; outline-offset: 4px; }
+  .yh-privacy-wrap { width: min(100% - 40px, 1040px); margin: 0 auto; }
+  .yh-privacy-hero { padding: 112px 0 72px; background: radial-gradient(circle at 85% 0%, #ddf3f5, transparent 33%), linear-gradient(145deg, #f3fafb, #fff 68%); border-bottom: 1px solid var(--line); }
+  .yh-privacy-kicker { margin: 0; color: var(--teal); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+  .yh-privacy h1 { max-width: 780px; margin: 24px 0 0; font-size: clamp(42px, 5.6vw, 69px); line-height: 1.08; letter-spacing: -.055em; font-weight: 760; }
+  .yh-privacy-lead { max-width: 710px; margin: 25px 0 0; color: #4e6472; font-size: clamp(18px, 2vw, 20px); line-height: 1.7; }
+  .yh-privacy-date { margin: 25px 0 0; color: #697c87; font-size: 13px; }
+  .yh-privacy-overview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 38px 0 20px; }
+  .yh-privacy-card { padding: 24px; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: 0 5px 22px rgba(22, 66, 80, .04); }
+  .yh-privacy-card strong { display: block; margin-bottom: 10px; font-size: 16px; }
+  .yh-privacy-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+  .yh-privacy-body { max-width: 760px; margin: 30px auto 0; padding: 0 0 62px; }
+  .yh-privacy-section { padding: 32px 0; border-top: 1px solid var(--line); }
+  .yh-privacy h2 { margin: 0 0 16px; font-size: clamp(25px, 3vw, 31px); line-height: 1.25; letter-spacing: -.035em; }
+  .yh-privacy-section p { margin: 0 0 15px; color: var(--muted); font-size: 16px; line-height: 1.8; }
+  .yh-privacy-contact { margin: 12px 0 52px; padding: 27px; border: 1px solid #cfe4e8; border-radius: 12px; background: #edf7f8; }
+  .yh-privacy-contact h2 { font-size: 23px; }
+  .yh-privacy-contact p { margin: 0 0 12px; color: var(--muted); line-height: 1.7; }
+  .yh-privacy-cn { padding-top: 24px; border-top: 1px solid var(--line); }
+  .yh-privacy-cn summary { cursor: pointer; color: #146879; font-size: 17px; font-weight: 700; }
+  .yh-privacy-cn-content { padding-top: 22px; }
+  .yh-privacy-cn-content h2 { margin-top: 25px; font-size: 23px; }
+  .yh-privacy-cn-content p { margin: 0 0 14px; color: var(--muted); line-height: 1.8; }
+  @media (max-width: 760px) { .yh-privacy-hero { padding: 80px 0 60px; } .yh-privacy-overview { grid-template-columns: 1fr; } .yh-privacy-body { margin-top: 14px; } }
+</style>
+
+<article class="yh-privacy">
+  <header class="yh-privacy-hero">
+    <div class="yh-privacy-wrap">
+      <p class="yh-privacy-kicker">YottaHop · Privacy</p>
+      <h1>Privacy, with a clear view of where your data goes.</h1>
+      <p class="yh-privacy-lead">YottaHop provides a gateway to AI models. This policy explains the information we handle, where model requests are processed, and the options available when data residency matters to your organisation.</p>
+      <p class="yh-privacy-date">Last updated: 14 September 2026</p>
+    </div>
+  </header>
+
+  <div class="yh-privacy-wrap">
+    <section class="yh-privacy-overview" aria-label="Processing locations at a glance">
+      <div class="yh-privacy-card"><strong>Chinese models</strong><p>Inference currently takes place in Singapore. Your request data is sent there to generate a response.</p></div>
+      <div class="yh-privacy-card"><strong>International models</strong><p>We work with Australian cloud partners to offer model access and local technical support. Processing location depends on the selected model and provider.</p></div>
+      <div class="yh-privacy-card"><strong>Dedicated options</strong><p>For suitable open-source models, we can help arrange deployment in Australia or within your enterprise environment.</p></div>
+    </section>
+
+    <div class="yh-privacy-body">
+      <section class="yh-privacy-section" aria-labelledby="yh-privacy-information">
+        <h2 id="yh-privacy-information">Information we handle</h2>
+        <p>When you use our services, we may handle account and contact details, billing and usage information, support correspondence, and the prompts, files or other content you submit to an AI model through our gateway. Model responses pass back through the gateway to you.</p>
+        <p>Please avoid including personal or sensitive information in model requests unless it is necessary for your use case and you have the authority to provide it.</p>
+      </section>
+
+      <section class="yh-privacy-section" aria-labelledby="yh-privacy-use">
+        <h2 id="yh-privacy-use">How we use information</h2>
+        <p>We use account, billing and usage information to provide access, administer accounts, calculate charges, support customers and protect the service. We route model requests and responses to deliver the service you ask for.</p>
+        <p>Our gateway does not store your model request content for unrelated purposes, such as marketing, resale or training our own models. Operational records, such as usage and billing metadata, may be retained to run the service and meet applicable obligations. If diagnostic logging is enabled, request content may appear in logs for troubleshooting. A model or infrastructure provider may handle request content under its own service terms; we can help you understand the applicable arrangement before you select a deployment.</p>
+      </section>
+
+      <section class="yh-privacy-section" aria-labelledby="yh-privacy-location">
+        <h2 id="yh-privacy-location">Where model requests are processed</h2>
+        <p>Chinese models currently offered through our standard service run inference in Singapore. Using one of these models means the content of your request is transmitted to Singapore for processing, even if you access YottaHop from Australia.</p>
+        <p>For international models, we work with Australian cloud partners and pass on competitive pricing alongside hands-on technical support. An Australian commercial partner does not, by itself, mean every request is processed or stored in Australia. The location depends on the model, infrastructure and configuration selected for your account. Ask us for the specific location and provider terms before sending regulated or location-restricted data.</p>
+      </section>
+
+      <section class="yh-privacy-section" aria-labelledby="yh-privacy-suppliers">
+        <h2 id="yh-privacy-suppliers">Our suppliers and security commitments</h2>
+        <p>We are working to put appropriate data security and handling terms in place with suppliers that process requests for us, including terms addressing the permitted use and protection of customer data. We also use reasonable technical and organisational measures to protect information handled by our gateway.</p>
+        <p>No deployment choice should be assumed to satisfy a particular regulatory or contractual requirement without reviewing the selected provider, location and terms with us.</p>
+      </section>
+
+      <section class="yh-privacy-section" aria-labelledby="yh-privacy-dedicated">
+        <h2 id="yh-privacy-dedicated">Australian and private deployment options</h2>
+        <p>If your organisation needs Australian data residency for an open-source model, or wants an enterprise-private deployment, contact us. We can help scope and implement a suitable dedicated arrangement. Availability, controls and pricing depend on the model and your requirements; these options are not the default for every model.</p>
+      </section>
+
+      <section class="yh-privacy-section" aria-labelledby="yh-privacy-rights">
+        <h2 id="yh-privacy-rights">Access, correction and questions</h2>
+        <p>You can contact us to ask about the personal information we hold about you, request a correction, or raise a privacy concern. We will respond in accordance with applicable law. If a concern remains unresolved, you may be able to contact the Office of the Australian Information Commissioner.</p>
+        <p>We may update this page when our services or handling practices change. The date above shows when this version was last updated.</p>
+      </section>
+
+      <aside class="yh-privacy-contact">
+        <h2>Talk to us about your data requirements</h2>
+        <p>Tell us which models you plan to use and where your data must remain. We can explain available processing locations and dedicated deployment options.</p>
+        <a href="mailto:support@yottahop.com?subject=YottaHop%20Privacy%20Enquiry">Contact YottaHop</a>
+      </aside>
+
+      <details class="yh-privacy-cn">
+        <summary>阅读中文版隐私政策</summary>
+        <div class="yh-privacy-cn-content" lang="zh-CN">
+          <p>YottaHop 提供 AI 模型接入网关。本政策说明我们处理哪些信息、模型请求在哪里处理，以及有数据驻留要求时可选择的部署方式。最后更新：2026 年 9 月 14 日。</p>
+          <h2>我们处理的信息</h2>
+          <p>使用服务时，我们可能处理账户和联系信息、账单与使用量信息、客服沟通内容，以及您通过网关提交给 AI 模型的提示词、文件或其他内容。模型响应也会经网关返回给您。除非业务确有需要且您有权提供，请避免在模型请求中加入个人或敏感信息。</p>
+          <h2>信息的使用方式</h2>
+          <p>我们使用账户、账单和使用量信息提供接入、管理账户、计算费用、支持客户和保护服务。模型请求和响应为交付您所请求的服务而路由。我们的网关不会为了营销、转售或训练自有模型等无关用途存储模型请求内容。为运营服务及履行适用义务，我们可能保留使用量和账单等运营元数据。如启用诊断日志，请求内容可能出现在用于排查问题的日志中。模型或基础设施供应商可能依据其服务条款处理请求内容；在您选择部署方案前，我们可以协助说明具体安排。</p>
+          <h2>模型请求在哪里处理</h2>
+          <p>标准服务中的中国模型目前在新加坡进行推理。使用这些模型意味着请求内容会被传输至新加坡处理，即使您从澳洲访问 YottaHop 也是如此。对于海外模型，我们与澳洲本地云服务合作伙伴合作，以提供更有竞争力的价格和贴近客户的技术支持。但澳洲本地商业合作关系并不代表所有请求一定在澳洲处理或存储。具体地点取决于您账户所选的模型、基础设施和配置。如需处理受监管或受地域限制的数据，请先向我们确认具体地点和供应商条款。</p>
+          <h2>供应商与安全承诺</h2>
+          <p>我们正与处理客户请求的供应商落实适当的数据安全和处理条款，涵盖客户数据的允许用途与保护要求。我们也采取合理的技术及组织措施保护网关处理的信息。任何部署方式是否满足特定法规或合同要求，都应结合所选供应商、处理地点和协议条款进行评估。</p>
+          <h2>澳洲本地及企业私有化部署</h2>
+          <p>如果您的组织要求开源模型在澳洲本地处理数据，或希望企业私有化部署，请联系我们。我们可以协助规划和实施合适的专属方案。可用性、控制措施及价格取决于模型和具体需求；这些并非所有模型的默认部署方式。</p>
+          <h2>查阅、更正及咨询</h2>
+          <p>您可以联系我们查询我们持有的您的个人信息、申请更正或提出隐私方面的疑虑。我们会按照适用法律处理。如问题仍未解决，您可能可以联系澳大利亚信息专员办公室。服务或数据处理方式发生变化时，我们可能更新本页。上方日期为本版本的最后更新时间。</p>
+          <p><a href="mailto:support@yottahop.com?subject=YottaHop%20Privacy%20Enquiry">联系 YottaHop</a></p>
+        </div>
+      </details>
+    </div>
+  </div>
+</article>
